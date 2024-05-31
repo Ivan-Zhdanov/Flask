@@ -11,9 +11,9 @@ def index():
 
 
 # localhost:5000/users/Ivan
-@app.route('/users/<name>')
-def users(name):
-    return render_template("users.html", user_name=name)
+@app.route('/users')
+def users():
+    return render_template("users.html")
 
 
 # Создание обработки страниц ошибок

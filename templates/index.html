@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,14 +10,20 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Hello World</h1>
-<p>First page on Flask</p>
-<p>The name is {{ user_name }}</p>
 
-{% for p in pizza %}
-    {{ p }}
-{% endfor %}
-<br>
-{{ pizza.0 | reverse}}
+
+{%extends 'base.html'%}
+{% block content %}
+
+    <h1>Hello World</h1>
+    <p>First page on Flask</p>
+    <p>The name is {{ user_name }}</p>
+
+    {% for p in pizza %}
+        {{ p }}
+    {% endfor %}
+    <br>
+    {{ pizza.0 | reverse}}
+{% endblock %}
 </body>
 </html>
